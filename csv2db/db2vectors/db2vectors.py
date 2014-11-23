@@ -13,6 +13,7 @@ def prepare_vectors(db_name):
     vectors = []
     current_patient = None
     current_vector = {}
+    i = 0
 
     for row in c.execute('''
         SELECT
@@ -36,8 +37,11 @@ def prepare_vectors(db_name):
             current_vector['patient'] = row[0]
             vectors.append(current_vector)
         current_vector['prescriptions'].append((row[3], row[4], row[5]))
+        i += 1
 
     conn.close()
+    print 'Sanity check - number of prescriptions in DB', i
+    print 'Sanity check - number of prescriptions in JSON', sum([len(v['prescriptions']) for v in vectors])
 
     return vectors
 

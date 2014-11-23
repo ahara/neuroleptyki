@@ -3,7 +3,7 @@ import datetime
 from collections import Counter
 
 
-def get_vectors(path='../db2vectors/vectors.json'):
+def get_vectors(path='../db2vectors/neuroleptyki_cleared.json'):
     with open(path, 'rb') as f:
         return json.load(f)
 
@@ -55,8 +55,11 @@ def print_stat(counter, n=10, path=None):
 
 if __name__ == '__main__':
     vectors = get_vectors()
+    print 'Sanity check - number of vectors', len(vectors)
+    print 'Sanity check - number of prescriptions', sum([len(v['prescriptions']) for v in vectors])
     chains = data_to_chains(vectors)
     counter = analyse_medicine_sequences(chains)
     print_stat(counter, 0, 'top_sequences.txt')
+    print 'Sanity check - number of prescriptions', sum([v for _, v in counter.items()])
     print 'Finished'
     
