@@ -48,7 +48,7 @@ def normalize_date(date):
         pattern = re.compile(r'(\d+)-(\d+)-(\d+)')
         match = re.search(pattern, date)
         if match:
-		    return date.replace('-', '/')
+            return date.replace('-', '/')
         raise Exception('Cannot convert date: %s', date)
 
 def normalizer(data, is_text=True):
