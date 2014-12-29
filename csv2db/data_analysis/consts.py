@@ -1,16 +1,7 @@
 """
 Shared constant variables
 """
-GENERATION_1 = ['AMISULPRIDE',
-                'ARIPIPRAZOLE',
-                'QUETIAPINE',
-                'OLANZAPINE',
-                'RISPERIDONE',
-                'SERTINDOLE',
-                'TIAPRIDE',
-                'ZIPRASIDONE']
-
-GENERATION_2 = ['CHLORPROMAZINE',
+GENERATION_1 = ['CHLORPROMAZINE',
                 'CHLORPROTHIXENE',
                 'FLUPENTIXOL',
                 'HALOPERIDOL',
@@ -21,6 +12,15 @@ GENERATION_2 = ['CHLORPROMAZINE',
                 'PROMAZINE',
                 'SULPIRIDE',
                 'ZUCLOPENTHIXOL']
+
+GENERATION_2 = ['AMISULPRIDE',
+                'ARIPIPRAZOLE',
+                'QUETIAPINE',
+                'OLANZAPINE',
+                'RISPERIDONE',
+                'SERTINDOLE',
+                'TIAPRIDE',
+                'ZIPRASIDONE']
 
 LITHIUM = ['LITHIUM CARBONATE']
 CLOZAPINE = ['CLOZAPINE']
