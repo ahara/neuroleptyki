@@ -23,7 +23,7 @@ buyers_age <- as.integer(format(as.POSIXct(df_2008_2012$Data.realizacji.recepty)
 df_right_age <- subset(df_2008_2012, buyers_age >= 3)
 buyers_death <- as.character(df_right_age$Data.zgonu..rok.miesi¹c.)
 buyers_death <- replace(buyers_death, buyers_death=='', '2014-10')
-df_right_age <- subset(df_right_age, as.character(df_right_age$Data.realizacji.recepty) < paste(buyers_death, '15', sep='-'))
+df_right_age <- subset(df_right_age, as.character(df_right_age$Data.realizacji.recepty) < paste(buyers_death, '32', sep='-'))
 
 # Unified units in Dose/Dawka field
 unified_dose <- as.character(df_right_age$Dawka)
